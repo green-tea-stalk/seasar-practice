@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE provider PUBLIC
+	"-//The Seasar Foundation//DTD Mayaa Provider 1.0//EN"
+	"http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
+
+<provider>
+	<engine>
+		<parameter name="defaultSpecification" value="/WEB-INF/view/default.mayaa" />
+		<parameter name="checkTimestamp" value="true" />
+		<parameter name="suffixSeparator" value="$" />
+		<parameter name="requestedSuffixEnabled" value="false" />
+		<parameter name="welcomeFileName" value="index.html" />
+		<parameter name="requestCharacterEncoding" value="UTF-8" />
+		<parameter name="surviveLimit" value="5" />
+		<parameter name="forwardLimit" value="10" />
+		<parameter name="convertCharset" value="false" />
+	</engine>
+	<templateBuilder>
+		<parameter name="outputTemplateWhitespace" value="true" />
+		<parameter name="outputMayaaWhitespace" value="false" />
+		<parameter name="optimize" value="true" />
+		<!-- ※1.1.22 で追加されたパラメータ -->
+		<parameter name="defaultCharset" value="UTF-8" />
+		<!-- ※1.1.25 で追加されたパラメータ -->
+		<parameter name="replaceSSIInclude" value="false" />
+	</templateBuilder>
+</provider>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>seasar-practice</title>
+<link rel="stylesheet" type="text/css" href="../css/default.css">
+</head>
+<body>
+	<div class="container">
+		<h1>掲示板</h1>
+		<span id="errors"></span>
+	</div>
+	<div class="container">
+		<form id="form" method="post">
+			<fieldset>
+				<legend>投稿内容</legend>
+				<label>
+					<span class="caption">名前</span>
+					<span class="content">
+						<input type="text" id="author" name="author" size="30" maxlength="50" placeholder="必須：名前を入力（50文字まで）">
+					</span>
+				</label>
+				<br>
+				<label>
+					<span class="caption">メールアドレス</span>
+					<span class="content">
+						<input type="text" id="mail" name="mail" size="60" maxlength="100" placeholder="メールアドレスを入力（100文字まで）">
+					</span>
+				</label>
+				<br>
+				<label>
+					<span class="caption">件名</span>
+					<span class="content">
+						<input type="text" id="title" name="title" size="60" maxlength="100" placeholder="必須：件名を入力（100文字まで）">
+					</span>
+				</label>
+				<br>
+				<label>
+					<span class="caption">本文</span>
+					<span class="content">
+						<textarea id="body" name="body" cols="60" rows="5" maxlength="1000" placeholder="必須：投稿内容を入力（1000文字まで）"></textarea>
+					</span>
+				</label>
+				<br>
+				<div class="right">
+					<input class="button" type="reset" value="リセット">
+					<input class="button" type="submit" name="post" value="送信">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div id="messageList" class="container">
+		<article>
+			<h2>タイトル</h2>
+			<p>本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文</p>
+			<p class="right">Posted by <a href="mailto:green.tea.stalk@gmail.com">Hiroyuki Sakai</a> at 2010/10/10 23:59:59</p>
+		</article>
+		<article>
+			<h2>タイトル</h2>
+			<p>本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文</p>
+			<p class="right">Posted by <a href="mailto:green.tea.stalk@gmail.com">Hiroyuki Sakai</a> at 2010/10/10 23:59:59</p>
+		</article>
+	</div>
+</body>
+</html>

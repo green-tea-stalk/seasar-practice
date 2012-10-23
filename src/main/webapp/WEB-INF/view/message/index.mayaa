@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:mayaa
+	xmlns:m="http://mayaa.seasar.org"
+	xmlns:s="http://sastruts.seasar.org"
+	xmlns:html="http://struts.apache.org/tags-html">
+	<m:with m:id="errors">
+		<html:errors />
+	</m:with>
+	<s:form m:id="form" action="/message" />
+	<m:echo m:id="author">
+		<m:attribute name="value" value="${messageForm.author}" />
+	</m:echo>
+	<m:echo m:id="mail">
+		<m:attribute name="value" value="${messageForm.mail}" />
+	</m:echo>
+	<m:echo m:id="title">
+		<m:attribute name="value" value="${messageForm.title}" />
+	</m:echo>
+	<m:echo m:id="body">
+		<m:write value="${messageForm.body}" escapeEol="false" />
+	</m:echo>
+	<m:echo m:id="messageList">
+		<m:forEach items="${messageAction.messageList}" var="message">
+			<m:element name="article">
+				<m:element name="h2">
+					<m:write value="${message.title}" />
+				</m:element>
+				<m:element name="p">
+					<m:write value="${message.body}" />
+				</m:element>
+				<m:element name="p">
+					<m:attribute name="class" value="right" />
+					<m:write value="Posted by " />
+					<m:if test="${message.mail == ''}">
+						<m:write value="${message.author}" />
+					</m:if>
+					<m:if test="${message.mail != ''}">
+						<m:element name="a">
+							<m:attribute name="href" value="mailto:${message.mail}" />
+							<m:write value="${message.author}" />
+						</m:element>
+					</m:if>
+					<m:write value=" at " />
+					<m:formatDate value="${message.posted}" pattern="yyyy/MM/dd hh:mm:ss" />
+				</m:element>
+			</m:element>
+		</m:forEach>
+	</m:echo>
+</m:mayaa>
